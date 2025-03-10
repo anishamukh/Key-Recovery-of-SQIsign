@@ -4,7 +4,7 @@ This repository implements an attack on the **SQIsign** digital signature scheme
 
 ## Overview
 
-- The **original SageMath SQISign implementation** is included as a folder in `SQIsign-SageMath`.
+- The **original SageMath SQISign implementation** is included as a folder in `SQIsign_Sage`.
 - The attack is implemented separately in `SQIsign_KeyRecovery` by modifying only the attack-relevant files.
 ---
 
