@@ -13,6 +13,8 @@ This repository implements an attack on the **SQIsign** digital signature scheme
 We target the signing process of SQIsign, where a significant portion of the computation involves processing the secret key through quaternion arithmetic enabled by the Deuring correspondence. The KLPT algorithm plays a central role in the signing procedure of https://eprint.iacr.org/2020/1240. 
 Within its internal subroutines , we identify Cornacchia’s algorithm as a prime target for side-channel attacks. This algorithm is used to find a pair of integers $(x, y)$ satisfying the equation $x^2 + d\cdot y^2 = M$ for co-prime integers $d$ and $M$, where $d=1$ in our case, and $M$ is derived from the secret key $s$. If the input $M$ to Cornacchia's algorithm can be guessed correctly via power side-channel, then it becomes possible to recover the secret signing key of SQIsign. In our paper, we propose a key recovery framework through the KLPT algorithm. Specifically, if an attacker can retrieve the outputs $\gamma$ of RepresentInteger and $\mu$ of StrongApproximation algorithms within KLPT, then the output $\gamma \cdot \mu$ to the KLPT algorithm can be reconstructed. 
 
+Demonstration: Both $\gamma$ and $\mu$ are quaternions, specifically, they have the form, $(x + iy + jz + kt) \in \mathbb{Z} + i\mathbb{Z} + j\mathbb{Z} + k\mathbb{Z}$. The coefficients $(x, y)$
+
 - 
 ### **Step 1: Install Required Software**
 Ensure you have the following installed on **WSL (Ubuntu on Windows)**:
