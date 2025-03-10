@@ -22,7 +22,7 @@ Demonstration: Both $\gamma$ and $\mu$ are quaternions, specifically, they have 
 - Ensure that you have **SageMath** installed.
 - Run the file, `example_signing_attack.sage` file in sage command line.
 - The output prints all the successfully reconstructed values of $\gamma$ and $\mu$ as $\gamma$ _constructed and $\mu$ _constructed.
-- When the retrieved values $\gamma_$constructed and $\mu_$constructed match with the actual values of $\gamma$ and $\mu$, the output notifies saying "Attack successful in Represent Integer(or respectively, Strong Approximation) with M = (retrieved value of intermediate M) and (z, t) = (retrieved value of z, t)"
+- When the retrieved values $\gamma$_constructed and $\mu$_constructed match with the actual values of $\gamma$ and $\mu$, the output notifies saying "Attack successful in Represent Integer(or respectively, Strong Approximation) with M = (retrieved value of intermediate M) and (z, t) = (retrieved value of z, t)"
 - Additionally, it also prints the time taken for the attack, which is usually in the order of $10^{-3}$ seconds for the 54-bit parameter set.
 - Finally, it also prints the actual values of $\gamma$ and $\mu$ in the KLPT algorithm which allows us to match the retrieved values with the actual values, thereby giving us $\gamma \cdot \mu$ and hence the output of KLPT.
 - All the above-mentioned relevant values and the time taken for the attack can also be found in the .txt files mentioned before.
