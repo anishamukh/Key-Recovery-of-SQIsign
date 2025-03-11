@@ -5,7 +5,7 @@ This repository implements an attack on the **SQIsign** digital signature scheme
 ## Overview
 
 - The **original SageMath SQISign implementation** is included as a folder in `SQIsign_Sage`.
-- The attack is implemented separately in `SQIsign_KeyRecovery` by modifying only the attack-relevant files.
+- The attack is implemented separately in `SQIsign-attack-changes` by modifying only the attack-relevant files.
 ---
 
 ## Description
@@ -15,7 +15,7 @@ Within its internal subroutines , we identify Cornacchia’s algorithm as a prim
 
 Demonstration: Both $\gamma$ and $\mu$ are quaternions, specifically, they have the form, $(x + iy + jz + kt) \in \mathbb{Z} + i\cdot \mathbb{Z} + j\cdot \mathbb{Z} + k\cdot \mathbb{Z}$. The coefficients $(x, y)$ can be recovered as the outputs of the Cornacchia's algorithm. Thus, we need to recover the remaining two coordinates (z, t) from RepresentInteger as well as StrongApproximation (Theorem-1 and Proposition-1 in the paper). Based on the methods described in Theorem-1 and Proposition-1, we run the `two_squares()` function available in SageMath. 
 
-- Specifically, in `KLPT_attack.py`, we call the `two_squares()` function inside `RepresentintegerHeuristic` and `strong_approximation_lattice_heuristic` functions. All intermediate values and relevant data are stored in `RepresentInteger_attack_values.txt` and `StrongApproximation_attack_values.txt` files. We perform the attack for 54-bit toy parameter set given in SQIsign-SageMath.
+- Specifically, in `KLPT_attack.py`, we call the `two_squares()` function inside `RepresentintegerHeuristic` and `strong_approximation_lattice_heuristic` functions. During the signing procedure, the `IdealToIsogenyFromKLPT` calls the the KLPT algorithm which we target. The KLPT algorithm is named as `EquivalentSmoothIdealHeuristic` in the original SQIsign SageMath implementation. All intermediate values and relevant data are stored in `RepresentInteger_attack_values.txt` and `StrongApproximation_attack_values.txt` files. We perform the attack for 54-bit toy parameter set given in SQIsign-SageMath.
 
  ## How to run and interpret results
 
