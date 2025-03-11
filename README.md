@@ -26,6 +26,6 @@ Demonstration: Both $\gamma$ and $\mu$ are quaternions, specifically, they have 
 - Additionally, it also prints the time taken for the attack, which is usually in the order of $10^{-3}$ seconds for the 54-bit parameter set.
 - Finally, it also prints the actual values of $\gamma$ and $\mu$ in the KLPT algorithm which allows us to match the retrieved values with the actual values, thereby giving us $\gamma \cdot \mu$ and hence the output of KLPT.
 - All the above-mentioned relevant values and the time taken for the attack can also be found in the .txt files mentioned before.
-- A sample of the possible output statements can be found in ![sample image]sample.png
+- A sample of the possible output statements can be found in ![sample image]Key-Recovery-of-SQIsign/sample.png
 
 
