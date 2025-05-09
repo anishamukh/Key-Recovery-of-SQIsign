@@ -1,26 +1,5 @@
 """
-A KLPT implementation specialised for use for SQISign.
-
-Many algorithms are taken from the from the SQISign paper:
-
-    SQISign: compact post-quantum signatures from quaternions and isogenies
-    Luca De Feo, David Kohel, Antonin Leroux, Christophe Petit, and Benjamin Wesolowski,
-    https://ia.cr/2020/1240
-
-With additional understanding and sub-algorithms from the original KLPT
-paper:
-
-    On the quaternion l-isogeny path problem
-    David Kohel, Kristin Lauter, Christophe Petit, Jean-Pierre Tignol
-    https://ia.cr/2014/505
-
-Generally, we expect only to import EquivalentSmoothIdealHeuristic 
-and SigningKLPT which are different forms of the KLPT algorithm used 
-throughout SQISign.
-
-As an implementation note, we try and append "Heuristic" to function 
-names when we only know solutions can be derived heuristically. If no 
-solution is found, `None` is returned.
+A proof-of-concept of the attack implementation in Represent Integer and Strong Approximation
 """
 
 # Python imports
