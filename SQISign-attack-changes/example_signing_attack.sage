@@ -1,16 +1,5 @@
 """
-Example usage of signing a message using SQISign.
-
-We imagine a two-party protocol, where a `signer` takes
-some message and signs it with the private key. A verifier
-then requests the public key EA and verifies the signature
-which is a tuple sig = E1, S. Where E1 is the commitment 
-codomain and S is the compressed bitstring corresponding 
-to the response isogeny σ : EA → E2.
-
-The challenge isogeny ϕ : E1 → E2 is derived from the msg
-by both the signer and verifier and so does not need to be
-sent between parties. 
+Example usage of the attack vectors
 """
 
 # Python imports
